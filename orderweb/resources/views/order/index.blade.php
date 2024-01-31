@@ -1,11 +1,11 @@
 @extends('templates.base')
-@section('title', 'Listado de Causales')
-@section('header', 'Listado de Causales')
+@section('title', 'Listado de Actividades')
+@section('header', 'Listado de Actividades')
 @section('content')
    @include('templates.messages')
     <div class="row">
         <div class="col-lg-12 mb-4 d-grip gap-2 d-md-block">
-            <a href="{{ route('causal.create') }}" class="btn btn-primary">Crear</a>
+            <a href="{{ route('order.create') }}" class="btn btn-primary">Crear</a>
         </div>
     </div>
     @include('templates.messages')
@@ -16,14 +16,22 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Descripción</th>
+                        <th>Fecha De Legalización</th>
+                        <th>Dirección</th>
+                        <th>Ciudad</th>
+                        <th>Observación</th>
+                        <th>Causal</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>Causal De Prueba</td>
+                        <td>2024/01/31</td>
+                        <td>Tres Esquinas</td>
+                        <td>Tuluá</td>
+                        <td>No Hay Contador</td>
+                        <td>Suspensión Del Servicio</td>
                         <td>
                             <a href="#" title="editar" class="btn btn-info btn-circle-btn-sm">
                                 <i class="far fa-edit"></i>

@@ -1,11 +1,11 @@
 @extends('templates.base')
-@section('title', 'Listado de Causales')
-@section('header', 'Listado de Causales')
+@section('title', 'Listado de Tipo de Actividades')
+@section('header', 'Listado de Tipo De Actividades')
 @section('content')
    @include('templates.messages')
     <div class="row">
         <div class="col-lg-12 mb-4 d-grip gap-2 d-md-block">
-            <a href="{{ route('causal.create') }}" class="btn btn-primary">Crear</a>
+            <a href="{{ route('type_activity.create') }}" class="btn btn-primary">Crear</a>
         </div>
     </div>
     @include('templates.messages')
@@ -23,7 +23,7 @@
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>Causal De Prueba</td>
+                        <td>Actividad De Prueba</td>
                         <td>
                             <a href="#" title="editar" class="btn btn-info btn-circle-btn-sm">
                                 <i class="far fa-edit"></i>
@@ -39,18 +39,5 @@
 @endsection
 
 @section('scripts')
-    <script>
-        $(document).ready(function(){
-            $('#table_data').DataTable();
-        });
-
-        function remove()
-        {
-            if(confirm("¿Está Seguro De Eliminar El Registro?"))
-                return true;
-            else
-                return false;
-        }
-    </script>
-
+    <script src="{{ asset('js/general.js') }}"></script>
 @endsection

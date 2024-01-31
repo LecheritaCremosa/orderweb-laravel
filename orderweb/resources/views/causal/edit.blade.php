@@ -1,6 +1,6 @@
 @extends('templates.base')
-@section('title', 'Crear Causal')
-@section('header', 'Crear Causal')
+@section('title', 'Editar Causal')
+@section('header', 'Editar Causal')
 @section('content')
     @include('templates.messages')
     <div class="row">
