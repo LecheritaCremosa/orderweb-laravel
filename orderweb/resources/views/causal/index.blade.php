@@ -21,20 +21,23 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach ($causals as $causal)
                     <tr>
-                        <td>1</td>
-                        <td>Causal De Prueba</td>
+                        <td>{{ $causal['id'] }}</td>
+                        <td>{{ $causal['description'] }}</td>
                         <td>
-                            <a href="#" title="editar" class="btn btn-info btn-circle-btn-sm">
+                            <a href="{{ route('causal.edit', $causal['id']) }}" title="Editar" class="btn btn-info btn-circle-btn-sm">
                                 <i class="far fa-edit"></i>
                             </a>
-                            <a href="#" title="eliminar" class="btn btn-danger btn-circle btn-sm" onclick="return remove()">
+                            <a href="{{ route('causal.destroy', $causal['id']) }}" title="Eliminar" class="btn btn-danger btn-circle btn-sm" onclick="return remove()">
                                 <i class="fas fa-trash"></i>
                             </a>
                         </td>
                     </tr>
+                    @endforeach
                 </tbody>
             </table>
+        </div>
     </div>
 @endsection
 
